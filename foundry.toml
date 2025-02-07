@@ -1,0 +1,9 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+
+
+#api_key = "PUQ2VS9I9C2N6ZVQWGUD5X9MK985BX8ZTN" //bsc
+
+#api_key = "5IXHGRSRBJAUG5URPDJXPV6DPMSY648UK8" //base
