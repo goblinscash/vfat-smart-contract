@@ -63,11 +63,15 @@ UniswapV3Connector: 0x5d53c9614C9054E622b1eA35231cEc2049A3a44e
 ### Setting Connectors
 ```
 1. updateConnectors in ConnectorRegistry > ([nftManagers],[uniswapv3Connector])
+```
+
+### Terminal command for Deployment
+```
+forge script script/UniswapV3Connector.s.sol:UniswapV3ConnectorScript --broadcast --rpc-url https://mainnet.base.org --private-key
+```
 
 
-
-forge script script/UniswapV3Connector.s.sol:UniswapV3ConnectorScript --broadcast --rpc-url https://mainnet.base.org --private-key 
-
+## Terminal command for smart contract verification
 
 
 forge script script/NftFarmStrategy.s.sol:NftFarmStrategyScript --broadcast --rpc-url https://mainnet.base.org --private-key 
