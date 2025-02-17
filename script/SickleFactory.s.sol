@@ -22,7 +22,7 @@ contract SickleFactoryScript is Script {
 
         _sickleFactory = new SickleFactory(
             msg.sender,                   // Admin address (owner of the factory)
-            sickleRegistryAddr,           
+            sickleRegistryAddr,            
             sickleImplementationAddr,  
             previousFactoryAddr          // Previous SickleFactory address (or 0x0)
         );

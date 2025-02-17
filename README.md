@@ -60,6 +60,9 @@ UniswapV3Connector: 0x5d53c9614C9054E622b1eA35231cEc2049A3a44e
 7. whitelist TransferLib in Sickle Registry
 ```
 
+### Setting Connectors
+```
+1. updateConnectors in ConnectorRegistry > ([nftManagers],[uniswapv3Connector])
 
 
 
@@ -73,6 +76,13 @@ forge script script/NftFarmStrategy.s.sol:NftFarmStrategyScript --broadcast --rp
 forge verify-contract --rpc-url https://mainnet.base.org 0x5d53c9614C9054E622b1eA35231cEc2049A3a44e UniswapV3Connector --verifier-api-key 5IXHGRSRBJAUG5URPDJXPV6DPMSY648UK8
 
 
+forge verify-contract \
+  --rpc-url https://mainnet.base.org \
+  0x7e8CfE955e6C747FD3Cd34361410d0933558ff16 \
+  NftSettingsRegistry \
+  --constructor-args $(cast abi-encode "constructor(address)" \
+  "0x52FFaccCBC6B6854Dd639D31b524CFe7485C8e67") \
+  --verifier-api-key 5IXHGRSRBJAUG5URPDJXPV6DPMSY648UK8
 
 forge verify-contract \
   --rpc-url https://mainnet.base.org \
