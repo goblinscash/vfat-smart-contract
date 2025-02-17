@@ -1,4 +1,4 @@
-### base sepolia testnet deployed address
+### base sepolia testnet deployed addresses
 
 ```
 UniswapV3Connector : 0x5d6094F3d68d725153d0938ce5b0E4D7815B42A7
@@ -28,7 +28,7 @@ usdt : 0x86509bA8e6F823b77Fc5E705F8e352Acb497C900
 
 ```
 
-### base mainnet deployed address
+### base mainnet deployed addresses
 
 ```
 NftSettingsLib: 0x993A70694594B40b6fBa8Bd228111705e5af32fa
