@@ -13,7 +13,7 @@ contract SickleScript is Script {
     function run() public {
         vm.startBroadcast();
 
-        address sickleRegistryAddr = 0xFd8E0705EdCc01A142ed0a8e76F036e38B72Bcc3;
+        address sickleRegistryAddr = 0xF1Cf2598d89215d15578813aBc04698BB55b8E3F;
 
         SickleRegistry sickleRegistry = SickleRegistry(sickleRegistryAddr);
         

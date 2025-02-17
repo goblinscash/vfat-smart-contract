@@ -11,7 +11,6 @@ import { IERC20 } from
 import { IFeesLib } from "../interfaces/libraries/IFeesLib.sol";
 import { DelegateModule } from "../modules/DelegateModule.sol";
 import { ITransferLib } from "../interfaces/libraries/ITransferLib.sol";
-import "forge-std/console.sol";
 
 contract TransferLib is MsgValueModule, DelegateModule, ITransferLib {
     address public constant ETH = 0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE;
@@ -124,7 +123,7 @@ contract TransferLib is MsgValueModule, DelegateModule, ITransferLib {
     ) internal {
         if (tokenIn != ETH) {
             SafeTransferLib.safeTransferFrom(
-                tokenIn,
+                ERC20(tokenIn),
                 Sickle(payable(address(this))).owner(),
                 address(this),
                 amountIn

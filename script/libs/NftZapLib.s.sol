@@ -14,8 +14,8 @@ contract NftZapLibScript is Script {
     function run() public {
         vm.startBroadcast();
 
-        address connectorRegistry = 0xdBaE2aA28b83b952f7542F87420897F4e12F1A99;
-        address swapLib = 0xd98634607C1FEc0dfB925c64037a675eb17a2fc2;
+        address connectorRegistry = 0x7d540FC712004c30A288962abAc7b47A86907734;
+        address swapLib = 0x98dc8aC4a5AcCbc17bBd91E8cFceb9fc2F317802;
 
         nftZapLib = new NftZapLib(ConnectorRegistry(connectorRegistry), ISwapLib(swapLib));
 

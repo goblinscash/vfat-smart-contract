@@ -28,8 +28,9 @@ const amount1Min = ethers.utils.parseUnits("581.537516819099281181", 18);
 
 
 
-const tokenId =  11669
-const liquidity = "1001550749129098347403943" 
+const tokenId = 12253
+    
+const liquidity = "167175499835819766909277" 
 
 async function setupContracts(signer) {
     // Contract Instances

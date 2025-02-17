@@ -14,7 +14,7 @@ contract FeesLibScript is Script {
     function run() public {
         vm.startBroadcast();
 
-        address sickleRegistry = 0x2c2fC8A1CDa7d853a214e294ea40De03d9fC1d2D; 
+        address sickleRegistry = 0xF1Cf2598d89215d15578813aBc04698BB55b8E3F; 
         address payable weth = payable(0x4200000000000000000000000000000000000006);
 
         _feesLib = new FeesLib(SickleRegistry(sickleRegistry), WETH(weth));

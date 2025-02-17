@@ -12,8 +12,8 @@ contract SickleRegistryScript is Script {
     function run() public {
         vm.startBroadcast();
 
-        address adminAddress = 0xe47C11e16783eE272117f8959dF3ceEC606C045d; 
-        address collectorAddress = 0xe47C11e16783eE272117f8959dF3ceEC606C045d;
+        address adminAddress = 0x9009a3BffFe89419D7dA4E6740ABdFE3b1BA843c; 
+        address collectorAddress = 0x9009a3BffFe89419D7dA4E6740ABdFE3b1BA843c;
 
         _sickleRegistry = new SickleRegistry(adminAddress, collectorAddress);
 

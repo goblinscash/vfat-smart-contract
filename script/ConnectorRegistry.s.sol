@@ -12,8 +12,8 @@ contract ConnectorRegistryScript is Script {
     function run() public {
         vm.startBroadcast();
 
-        address admin = 0xe47C11e16783eE272117f8959dF3ceEC606C045d; 
-        address timelockAdmin = 0xe47C11e16783eE272117f8959dF3ceEC606C045d;
+        address admin = 0x9009a3BffFe89419D7dA4E6740ABdFE3b1BA843c; 
+        address timelockAdmin = 0x9009a3BffFe89419D7dA4E6740ABdFE3b1BA843c;
 
         connectorRegistry = new ConnectorRegistry(admin, timelockAdmin);
 

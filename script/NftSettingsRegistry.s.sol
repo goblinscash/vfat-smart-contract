@@ -9,7 +9,7 @@ contract NftSettingsRegistryScript is Script {
     SickleFactory public sickleFactory;
     NftSettingsRegistry public nftSettingsRegistry;
 
-    address public sickleFactoryAddress = 0x62fB598f4a7379Ca36c2d031443F6c97B8F60C3f; 
+    address public sickleFactoryAddress = 0x52FFaccCBC6B6854Dd639D31b524CFe7485C8e67; 
 
     function run() public {
         vm.startBroadcast();

@@ -13,7 +13,7 @@ contract SwapLibScript is Script {
     function run() public {
         vm.startBroadcast();
 
-        address connectorRegistryAddress = 0xdBaE2aA28b83b952f7542F87420897F4e12F1A99;
+        address connectorRegistryAddress = 0x7d540FC712004c30A288962abAc7b47A86907734;
 
         swapLib = new SwapLib(ConnectorRegistry(connectorRegistryAddress));
 

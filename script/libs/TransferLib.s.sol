@@ -14,7 +14,7 @@ contract TransferLibScript is Script {
     function run() public {
         vm.startBroadcast();
 
-        address feesLibAddress = 0x2c2fC8A1CDa7d853a214e294ea40De03d9fC1d2D; 
+        address feesLibAddress = 0x39318fea5B43BE55615c8c2fa9Ac3913425a8A74; 
         address payable weth = payable(0x4200000000000000000000000000000000000006); 
 
         _transferLib = new TransferLib(IFeesLib(feesLibAddress), WETH(weth));

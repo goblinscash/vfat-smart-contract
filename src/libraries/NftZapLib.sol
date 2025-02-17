@@ -12,7 +12,6 @@ import { ConnectorRegistry } from "../ConnectorRegistry.sol";
 import { DelegateModule } from "../modules/DelegateModule.sol";
 import { NftZapIn, NftZapOut } from "../structs/NftZapStructs.sol";
 import { NftAddLiquidity } from "../structs/NftLiquidityStructs.sol";
-import "forge-std/console.sol";
 
 contract NftZapLib is DelegateModule, INftZapLib {
     error LiquidityAmountError(); // 0x4d0ab6b4
@@ -28,7 +27,6 @@ contract NftZapLib is DelegateModule, INftZapLib {
     function zapIn(
         NftZapIn memory zap
     ) external payable {
-        console.log("<<<<<<<<<0000000000000000>>>>>>>>>>");
         uint256 swapDataLength = zap.swaps.length;
         for (uint256 i; i < swapDataLength;) {
             _delegateTo(
@@ -38,7 +36,6 @@ contract NftZapLib is DelegateModule, INftZapLib {
                 i++;
             }
         }
-        console.log("<<<<<<<<<11111111+>>>>>>>>>>");
 
         bool atLeastOneNonZero = false;
 
@@ -46,7 +43,6 @@ contract NftZapLib is DelegateModule, INftZapLib {
         if (addLiquidityParams.amount0Desired == 0) {
             addLiquidityParams.amount0Desired =
                 IERC20(addLiquidityParams.pool.token0).balanceOf(address(this));
-                console.log("<<<<<<<<<222222222>>>>>>>>>>", IERC20(addLiquidityParams.pool.token0).balanceOf(address(this)));
         }
         if (addLiquidityParams.amount1Desired == 0) {
             addLiquidityParams.amount1Desired =

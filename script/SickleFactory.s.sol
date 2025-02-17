@@ -14,9 +14,9 @@ contract SickleFactoryScript is Script {
     function run() public {
         vm.startBroadcast();
 
-        address sickleRegistryAddr = 0xFd8E0705EdCc01A142ed0a8e76F036e38B72Bcc3;
+        address sickleRegistryAddr = 0xF1Cf2598d89215d15578813aBc04698BB55b8E3F;
         
-        address sickleImplementationAddr = 0x527A36c3C0e66d10664954cd86B156670e6871E0;
+        address sickleImplementationAddr = 0x72a72C80fe211bEaBce5516974fffa2c9aECBb3D;
 
         address previousFactoryAddr = 0x0000000000000000000000000000000000000000;
 

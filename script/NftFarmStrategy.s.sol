@@ -25,17 +25,17 @@ contract NftFarmStrategyScript is Script {
     function run() public {
         vm.startBroadcast();
 
-        address factoryAddress = 0x62fB598f4a7379Ca36c2d031443F6c97B8F60C3f; 
-        address connectorRegistry = 0xdBaE2aA28b83b952f7542F87420897F4e12F1A99; 
-        address nftSettingsRegistryAddress = 0xcec6e003108B15FA31A7F5BD80f91aAab3E565CF;
+        address factoryAddress = 0x52FFaccCBC6B6854Dd639D31b524CFe7485C8e67; 
+        address connectorRegistry = 0x7d540FC712004c30A288962abAc7b47A86907734; 
+        address nftSettingsRegistryAddress = 0x7e8CfE955e6C747FD3Cd34361410d0933558ff16;
 
         NftFarmStrategy.Libraries memory libraries = NftFarmStrategy.Libraries({
-            nftTransferLib: INftTransferLib(0xa2C3056E4150A9Df0459FEd70Bc735702dC6Cc30), 
-            transferLib: ITransferLib(0x64e72a67eaE17aa771D97eA07e3407b171f33Fe5),       
-            swapLib: ISwapLib(0xd98634607C1FEc0dfB925c64037a675eb17a2fc2),               
-            feesLib: IFeesLib(0x2c2fC8A1CDa7d853a214e294ea40De03d9fC1d2D),               
-            nftZapLib: INftZapLib(0x758a3B49A4Fee14B18CC8dFA5CeB547Acc594f21),           
-            nftSettingsLib: INftSettingsLib(0x4FDAd64621cd20CCC94164bF81C299ff75346E6a)
+            nftTransferLib: INftTransferLib(0x359A5f4AD8A13cfad7b7C9459929AEDba930BBa8), 
+            transferLib: ITransferLib(0x20fd03a19Fa0c45f54b8Cc2a0781B10CcE6A1936),       
+            swapLib: ISwapLib(0x98dc8aC4a5AcCbc17bBd91E8cFceb9fc2F317802),               
+            feesLib: IFeesLib(0x39318fea5B43BE55615c8c2fa9Ac3913425a8A74),               
+            nftZapLib: INftZapLib(0x335f82f20E33400258a1cd235bEC4D6B8E601796),           
+            nftSettingsLib: INftSettingsLib(0x993A70694594B40b6fBa8Bd228111705e5af32fa)
         });
 
         connector = new NftFarmStrategy(
