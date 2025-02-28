@@ -76,7 +76,6 @@ contract UniswapV3Connector is INftLiquidityConnector, INftFarmConnector {
             ISwapRouter.ExactInputParams({
                 path: extraData.path,
                 recipient: address(this),
-                deadline: block.timestamp + 1,
                 amountIn: swap.amountIn,
                 amountOutMinimum: swap.minAmountOut
             })

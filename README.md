@@ -46,12 +46,13 @@ SickleFactory: 0x52FFaccCBC6B6854Dd639D31b524CFe7485C8e67
 Sickle: 0x72a72C80fe211bEaBce5516974fffa2c9aECBb3D
 
 NftFarmStrategy: 0x63B7CB79f503cB9BB154DD3bfFC1095edb272df3
-UniswapV3Connector: 0x5d53c9614C9054E622b1eA35231cEc2049A3a44e
+Old UniswapV3Connector: 0x5d53c9614C9054E622b1eA35231cEc2049A3a44e
+New UniswapV3Connector: 0x56f5FC8E9f373DE5c425957e991274A3cBB811CA
 ```
 
 ### Sickle Registry
 ```
-1. whitelist uniswapV3Connector in SickleRegistry
+1. whitelist uniswapV3Connector in SickleRegistry targets
 2. whitelist settingLib in Sickle Registry
 3. whitelist FeesLib in Sickle Registry
 4. whitelist NftSettingLib in Sickle Registry
@@ -63,6 +64,7 @@ UniswapV3Connector: 0x5d53c9614C9054E622b1eA35231cEc2049A3a44e
 ### Setting Connectors
 ```
 1. updateConnectors in ConnectorRegistry > ([nftManagers],[uniswapv3Connector])
+2. updateConnectors in ConnectorRegistry > ([swapRouter],[uniswapv3Connector])
 ```
 
 ### Terminal command for Deployment
@@ -74,10 +76,10 @@ forge script script/UniswapV3Connector.s.sol:UniswapV3ConnectorScript --broadcas
 ## Terminal command for smart contract verification
 
 
-forge script script/NftFarmStrategy.s.sol:NftFarmStrategyScript --broadcast --rpc-url https://mainnet.base.org --private-key 
+forge script script/UniswapV3Connector.s.sol:UniswapV3ConnectorScript --broadcast --rpc-url https://mainnet.base.org --private-key 
 
 
-forge verify-contract --rpc-url https://mainnet.base.org 0x5d53c9614C9054E622b1eA35231cEc2049A3a44e UniswapV3Connector --verifier-api-key 5IXHGRSRBJAUG5URPDJXPV6DPMSY648UK8
+forge verify-contract --rpc-url https://mainnet.base.org 0x56f5FC8E9f373DE5c425957e991274A3cBB811CA UniswapV3Connector --verifier-api-key 5IXHGRSRBJAUG5URPDJXPV6DPMSY648UK8
 
 
 forge verify-contract \
